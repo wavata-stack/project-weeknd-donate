@@ -39,8 +39,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background:
-        linear-gradient(180deg, rgba(10, 10, 15, 0.9) 0%, rgba(10, 10, 15, 0.75) 30%, rgba(10, 10, 15, 0.6) 60%, rgba(10, 10, 15, 0.9) 100%);
+      background: linear-gradient(180deg, rgba(10, 10, 15, 0.92) 0%, rgba(10, 10, 15, 0.7) 40%, rgba(10, 10, 15, 0.92) 100%);
     }
 
     .bg-grid {
@@ -55,6 +54,418 @@
       background-size: 60px 60px;
       z-index: 1;
       pointer-events: none;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px 0;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 70px;
+    }
+
+    .hero-left {
+      flex-shrink: 0;
+    }
+
+    .hero-left img {
+      width: 130px;
+      height: 130px;
+      border-radius: 30px;
+      object-fit: cover;
+      border: 3px solid rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.15);
+    }
+
+    .hero-right h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #ffd700 0%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .hero-right .sub {
+      font-size: 14px;
+      color: #ffd700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-right p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.7;
+      max-width: 550px;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .section-head .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.3), transparent);
+    }
+
+    .section-head h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      white-space: nowrap;
+      background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===== REQUIREMENTS ===== */
+    .requirements {
+      margin-bottom: 80px;
+    }
+
+    .req-strip {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .req-strip .req-item {
+      flex: 1;
+      min-width: 220px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 22px 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: border-color 0.3s;
+    }
+
+    .req-strip .req-item:hover {
+      border-color: rgba(255, 215, 0, 0.15);
+    }
+
+    .req-strip .req-item .r-icon {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .req-strip .req-item h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .req-strip .req-item p {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+    }
+
+    .req-strip .req-item .pill-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .req-strip .req-item .pill-group span {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .req-strip .req-item.full {
+      flex: 0 0 100%;
+    }
+
+    /* ===== REWARDS ===== */
+    .rewards {
+      margin-bottom: 80px;
+    }
+
+    .reward-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .reward-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 16px;
+      padding: 24px 18px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reward-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--rc, rgba(255, 215, 0, 0.3));
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .reward-card .r-num {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 2px;
+      background: linear-gradient(180deg, var(--rc, #ffd700), var(--rc-dark, #b8860b));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .reward-card .r-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .reward-card .r-divider {
+      width: 30px;
+      height: 2px;
+      background: var(--rc, #ffd700);
+      margin: 0 auto 14px;
+      border-radius: 2px;
+      opacity: 0.4;
+    }
+
+    .reward-card .r-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .reward-card .r-roles span {
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .reward-card .r-roles .highlight {
+      background: rgba(88, 101, 242, 0.15);
+      border-color: rgba(88, 101, 242, 0.25);
+      color: #8b9aff;
+    }
+
+    .reward-card .r-roles .best {
+      background: rgba(255, 215, 0, 0.15);
+      border-color: rgba(255, 215, 0, 0.25);
+      color: #ffd700;
+    }
+
+    .reward-card:nth-child(1) { --rc: #ffd700; --rc-dark: #b8860b; }
+    .reward-card:nth-child(2) { --rc: #00d4ff; --rc-dark: #0099cc; }
+    .reward-card:nth-child(3) { --rc: #ff6b9d; --rc-dark: #cc3366; }
+    .reward-card:nth-child(4) { --rc: #ff4444; --rc-dark: #cc0000; }
+    .reward-card:nth-child(5) { --rc: #00c853; --rc-dark: #009624; }
+    .reward-card:nth-child(6) { --rc: #aa66ff; --rc-dark: #7733cc; }
+    .reward-card:nth-child(7) { --rc: #ffd700; --rc-dark: #b8860b; }
+    .reward-card:nth-child(8) { --rc: #ff6b9d; --rc-dark: #cc3366; }
+
+    /* ===== CLAIM ===== */
+    .claim {
+      margin-bottom: 80px;
+    }
+
+    .claim-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .claim-step {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 28px 22px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .claim-step:hover {
+      border-color: rgba(255, 215, 0, 0.15);
+    }
+
+    .claim-step .cs-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffd700, #b8860b);
+      color: #0a0a0f;
+      font-weight: 800;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .claim-step h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .claim-step p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px 80px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 34px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 44px;
+      background: #5865F2;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .cta a:hover {
+      background: #4752c4;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 40px rgba(88, 101, 242, 0.4);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    footer .fl {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 10px;
+    }
+
+    footer .fl a {
+      color: rgba(255, 255, 255, 0.35);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+
+    footer .fl a:hover {
+      color: #ffd700;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .reward-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .claim-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+      }
+      .hero-right p {
+        max-width: 100%;
+      }
+      .section-head h2 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .reward-cards {
+        grid-template-columns: 1fr;
+      }
+      .wrapper {
+        padding: 30px 14px 0;
+      }
+      .req-strip .req-item {
+        min-width: 100%;
+      }
     }
 
     .particles {
@@ -84,408 +495,6 @@
       90% { opacity: 1; }
       100% { opacity: 0; transform: translateY(-10vh) scale(1); }
     }
-
-    .wrapper {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .hero-logo img {
-      width: 100px;
-      height: 100px;
-      border-radius: 20px;
-      object-fit: cover;
-      border: 2px solid rgba(255, 215, 0, 0.3);
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Anton', sans-serif;
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      line-height: 1;
-      text-transform: uppercase;
-      background: linear-gradient(180deg, #ffd700 0%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 span {
-      display: block;
-      font-size: 0.45em;
-      background: linear-gradient(180deg, #fff 0%, #aaa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.6);
-      max-width: 550px;
-      margin: 16px auto 0;
-      line-height: 1.6;
-    }
-
-    /* Section titles */
-    .section-title {
-      font-family: 'Anton', sans-serif;
-      font-size: 32px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 8px;
-      background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.6) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: rgba(255, 255, 255, 0.4);
-      font-size: 14px;
-      margin-bottom: 36px;
-    }
-
-    /* Requirements */
-    .requirements {
-      margin-bottom: 80px;
-    }
-
-    .req-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .req-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 28px 24px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: border-color 0.3s ease;
-    }
-
-    .req-card:hover {
-      border-color: rgba(255, 215, 0, 0.2);
-    }
-
-    .req-card.full {
-      grid-column: 1 / -1;
-    }
-
-    .req-card .req-icon {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .req-card h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .req-card p {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      line-height: 1.6;
-    }
-
-    .req-card .platforms {
-      display: flex;
-      gap: 10px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-
-    .req-card .platforms span {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Rewards Table */
-    .rewards {
-      margin-bottom: 80px;
-    }
-
-    .rewards-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 4px;
-    }
-
-    .rewards-table th {
-      font-family: 'Anton', sans-serif;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: rgba(255, 255, 255, 0.4);
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .rewards-table th:first-child {
-      width: 30%;
-    }
-
-    .rewards-table td {
-      padding: 14px 16px;
-      font-size: 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      transition: background 0.3s ease;
-    }
-
-    .rewards-table tr:hover td {
-      background: rgba(255, 215, 0, 0.05);
-    }
-
-    .rewards-table td:first-child {
-      font-weight: 700;
-      border-radius: 10px 0 0 10px;
-    }
-
-    .rewards-table td:last-child {
-      border-radius: 0 10px 10px 0;
-    }
-
-    .rewards-table .views {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .rewards-table .views .num {
-      font-family: 'Anton', sans-serif;
-      font-size: 22px;
-      background: linear-gradient(180deg, #ffd700 0%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .rewards-table .views .label {
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.35);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .rewards-table .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .rewards-table .tag {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      color: #ffd700;
-    }
-
-    .rewards-table .tag.blue {
-      background: rgba(0, 212, 255, 0.1);
-      border-color: rgba(0, 212, 255, 0.2);
-      color: #00d4ff;
-    }
-
-    .rewards-table .tag.pink {
-      background: rgba(255, 107, 157, 0.1);
-      border-color: rgba(255, 107, 157, 0.2);
-      color: #ff6b9d;
-    }
-
-    .rewards-table .tag.red {
-      background: rgba(255, 68, 68, 0.1);
-      border-color: rgba(255, 68, 68, 0.2);
-      color: #ff4444;
-    }
-
-    .rewards-table .tag.green {
-      background: rgba(0, 200, 83, 0.1);
-      border-color: rgba(0, 200, 83, 0.2);
-      color: #00c853;
-    }
-
-    /* How to Claim */
-    .claim {
-      margin-bottom: 80px;
-    }
-
-    .claim-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .claim-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 28px 24px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      text-align: center;
-      transition: border-color 0.3s ease;
-    }
-
-    .claim-card:hover {
-      border-color: rgba(255, 215, 0, 0.2);
-    }
-
-    .claim-card .step-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ffd700, #b8860b);
-      color: #0a0a0f;
-      font-weight: 800;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
-    }
-
-    .claim-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .claim-card p {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      line-height: 1.6;
-    }
-
-    /* CTA */
-    .cta {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .cta h2 {
-      font-family: 'Anton', sans-serif;
-      font-size: 36px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.6) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .cta p {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 15px;
-      margin-bottom: 24px;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 40px;
-      background: #5865F2;
-      color: #fff;
-      font-weight: 700;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      text-decoration: none;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .cta-btn:hover {
-      background: #4752c4;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 40px rgba(88, 101, 242, 0.4);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    footer .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 12px;
-    }
-
-    footer .footer-links a {
-      color: rgba(255, 255, 255, 0.4);
-      text-decoration: none;
-      font-size: 13px;
-      transition: color 0.3s;
-    }
-
-    footer .footer-links a:hover {
-      color: #ffd700;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .req-grid {
-        grid-template-columns: 1fr;
-      }
-      .claim-grid {
-        grid-template-columns: 1fr;
-      }
-      .rewards-table th:nth-child(2),
-      .rewards-table td:nth-child(2) {
-        display: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .wrapper {
-        padding: 40px 16px;
-      }
-      .hero h1 {
-        font-size: clamp(2rem, 12vw, 3.5rem);
-      }
-    }
   </style>
 </head>
 <body>
@@ -496,146 +505,178 @@
 
   <div class="wrapper">
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-logo">
+      <div class="hero-left">
         <img src="logo.jpg" alt="Project Weeknd Logo">
       </div>
-      <h1>
-        PROJECT WEEKND
-        <span>Creator Program</span>
-      </h1>
-      <p>Get rewarded for creating content. Hit a view or viewer milestone and unlock exclusive Discord roles and in-game rewards.</p>
+      <div class="hero-right">
+        <div class="sub">Chapter 2 - Season 2</div>
+        <h1>Project Weeknd<br>Creator Program</h1>
+        <p>Get rewarded for creating content. Hit a view or viewer milestone and unlock exclusive Discord roles and in-game rewards.</p>
+      </div>
     </section>
 
-    <!-- Requirements -->
+    <!-- REQUIREMENTS -->
     <section class="requirements">
-      <h2 class="section-title">Requirements</h2>
-      <p class="section-sub">Follow these rules to be eligible for rewards</p>
-      <div class="req-grid">
-        <div class="req-card">
-          <div class="req-icon">💧</div>
+      <div class="section-head">
+        <h2>Requirements</h2>
+        <div class="line"></div>
+      </div>
+      <div class="req-strip">
+        <div class="req-item">
+          <div class="r-icon">💧</div>
           <h4>Watermark</h4>
           <p>Include the official Project Weeknd watermark somewhere visible in your video or stream. Find it in our Discord.</p>
         </div>
-        <div class="req-card">
-          <div class="req-icon">#</div>
+        <div class="req-item">
+          <div class="r-icon">#</div>
           <h4>Hashtag</h4>
           <p>Use <strong>#projectweeknd</strong> in the title or description of your video. Videos only, not required for streams.</p>
         </div>
-        <div class="req-card full">
-          <div class="req-icon">🎬</div>
-          <h4>Original Content</h4>
-          <p>Your content must be original and real. Buying views, likes or comments, botting or reposting stolen content will get you permanently disqualified. If your view count looks suspicious compared to your likes and comments, we reserve the right to disqualify you.</p>
-        </div>
-        <div class="req-card full">
-          <div class="req-icon">📱</div>
+        <div class="req-item">
+          <div class="r-icon">📱</div>
           <h4>Platforms</h4>
           <p>Content must be posted on one of the following platforms.</p>
-          <div class="platforms">
+          <div class="pill-group">
             <span>TikTok</span>
             <span>YouTube</span>
             <span>Instagram Reels</span>
           </div>
         </div>
+        <div class="req-item full">
+          <div class="r-icon">🎬</div>
+          <h4>Original Content</h4>
+          <p>Your content must be original and real. Buying views, likes or comments, botting or reposting stolen content will get you permanently disqualified. If your view count looks suspicious compared to your likes and comments, we reserve the right to disqualify you.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Rewards -->
+    <!-- REWARDS -->
     <section class="rewards">
-      <h2 class="section-title">Rewards</h2>
-      <p class="section-sub">Hit milestones on Videos or Live Streams</p>
-      <table class="rewards-table">
-        <thead>
-          <tr>
-            <th>Views / Viewers</th>
-            <th>Type</th>
-            <th>Rewards</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><div class="views"><span class="num">5,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag">Donator Role</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">10,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag pink">Exclusive Series Role</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">17,500</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag">OG Donator Role</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">27,500</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag red">Sweat Donator Role</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">40,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag blue">Gaming Series Role</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">55,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag green">FNCS Series Role</span> <span class="tag blue">Content Creator Role</span> <span class="tag">Support a Creator Code</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">75,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag">Full Locker Role</span> <span class="tag blue">Content Creator Role</span> <span class="tag">Support a Creator Code</span></div></td>
-          </tr>
-          <tr>
-            <td><div class="views"><span class="num">100,000</span> <span class="label">Views</span></div></td>
-            <td>Videos</td>
-            <td><div class="tags"><span class="tag pink">Legacy Donator Role</span> <span class="tag blue">Content Creator Role</span> <span class="tag">Support a Creator Code</span></div></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="section-head">
+        <h2>Rewards</h2>
+        <div class="line"></div>
+      </div>
+      <div class="reward-cards">
+        <div class="reward-card">
+          <div class="r-num">5K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>OG Donator Role</span>
+            <span class="highlight">Content Creator Role</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">10K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Pickaxe Donator Role</span>
+            <span class="highlight">Content Creator Role</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">17.5K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Weeknd Series Role</span>
+            <span class="highlight">Content Creator Role</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">27.5K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Sweat Donator Role</span>
+            <span class="highlight">Content Creator Role</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">40K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Gaming Series Role</span>
+            <span class="highlight">Content Creator Role</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">55K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>FNCS Series Role</span>
+            <span class="highlight">Content Creator Role</span>
+            <span>Support a Creator Code</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">75K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Full Locker Role</span>
+            <span class="highlight">Content Creator Role</span>
+            <span>Support a Creator Code</span>
+          </div>
+        </div>
+        <div class="reward-card">
+          <div class="r-num">100K</div>
+          <div class="r-label">Views</div>
+          <div class="r-divider"></div>
+          <div class="r-roles">
+            <span>Legacy Donator Role</span>
+            <span class="highlight">Content Creator Role</span>
+            <span class="best">Not Random</span>
+            <span>Support a Creator Code</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- How to Claim -->
+    <!-- CLAIM -->
     <section class="claim">
-      <h2 class="section-title">How to Claim</h2>
-      <p class="section-sub">Redeem your rewards in 3 simple steps</p>
-      <div class="claim-grid">
-        <div class="claim-card">
-          <div class="step-num">1</div>
+      <div class="section-head">
+        <h2>How to Claim</h2>
+        <div class="line"></div>
+      </div>
+      <div class="claim-steps">
+        <div class="claim-step">
+          <div class="cs-num">1</div>
           <h4>For Videos</h4>
           <p>Send the video link via DM to a staff member. Allow 24 to 48 hours for verification.</p>
         </div>
-        <div class="claim-card">
-          <div class="step-num">2</div>
+        <div class="claim-step">
+          <div class="cs-num">2</div>
           <h4>For Streams</h4>
           <p>Record a short phone video showing your viewer count, gameplay, Discord link and hashtag for at least 5 seconds. No screenshots. Send it to a staff member via DM.</p>
         </div>
-        <div class="claim-card">
-          <div class="step-num">3</div>
+        <div class="claim-step">
+          <div class="cs-num">3</div>
           <h4>Get Your Rewards</h4>
           <p>Once verified, your Discord role and in-game rewards will be granted.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
-      <h2>Ready to start?</h2>
-      <p>Join the Discord and start creating.</p>
-      <a href="https://discord.gg/M94JE25ynq" target="_blank" rel="noopener" class="cta-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-        discord.gg/projectweeknd
-      </a>
-    </section>
-
   </div>
 
-  <!-- Footer -->
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to start?</h2>
+    <p>Join the Discord and start creating.</p>
+    <a href="https://discord.gg/M94JE25ynq" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+      Join the Discord
+    </a>
+  </section>
+
   <footer>
-    <div class="footer-links">
+    <div class="fl">
       <a href="https://discord.gg/M94JE25ynq" target="_blank" rel="noopener">Contact</a>
       <a href="index.html">Donate</a>
     </div>
@@ -643,9 +684,9 @@
   </footer>
 
   <script>
-    (function createParticles() {
-      const container = document.getElementById('particles');
-      for (let i = 0; i < 30; i++) {
+    (function() {
+      const c = document.getElementById('particles');
+      for (let i = 0; i < 25; i++) {
         const p = document.createElement('div');
         p.className = 'particle';
         p.style.left = Math.random() * 100 + '%';
@@ -653,8 +694,8 @@
         p.style.height = p.style.width;
         p.style.animationDuration = (Math.random() * 15 + 10) + 's';
         p.style.animationDelay = (Math.random() * 15) + 's';
-        p.style.opacity = Math.random() * 0.5 + 0.1;
-        container.appendChild(p);
+        p.style.opacity = Math.random() * 0.4 + 0.05;
+        c.appendChild(p);
       }
     })();
 
@@ -667,7 +708,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.req-card, .claim-card, .rewards-table tr').forEach(el => {
+    document.querySelectorAll('.req-item, .reward-card, .claim-step').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'all 0.5s ease';
