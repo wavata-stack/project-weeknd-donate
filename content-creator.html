@@ -229,6 +229,43 @@
       flex: 0 0 100%;
     }
 
+    .wm-preview {
+      margin: 12px 0 8px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.08);
+      line-height: 0;
+    }
+
+    .wm-preview img {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+    }
+
+    .wm-dl {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 18px;
+      background: rgba(255,215,0,0.12);
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 8px;
+      color: #ffd700;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s;
+    }
+
+    .wm-dl:hover {
+      background: rgba(255,215,0,0.2);
+      border-color: rgba(255,215,0,0.4);
+    }
+
     /* ===== REWARDS ===== */
     .rewards {
       margin-bottom: 80px;
@@ -553,7 +590,13 @@
         <div class="req-item">
           <div class="r-icon">💧</div>
           <h4>Watermark</h4>
-          <p>Include the official Project Weeknd watermark somewhere visible in your video or stream. <a href="watermark.png" download style="color:#ffd700;text-decoration:none;font-weight:600;">Download Watermark</a></p>
+          <p>Include the official Project Weeknd watermark somewhere visible in your video or stream.</p>
+          <div class="wm-preview">
+            <a href="watermark.png" download>
+              <img src="watermark.png" alt="Watermark">
+            </a>
+          </div>
+          <a href="watermark.png" download class="wm-dl">Download Watermark</a>
         </div>
         <div class="req-item">
           <div class="r-icon">#</div>
